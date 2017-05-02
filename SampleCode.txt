@@ -1,0 +1,6 @@
+//dates 
+$today = date('Y-m-d');
+		  $oneYear = date('Y-m-d',strtotime(date("Y-m-d",mktime())."365 day"));
+		  echo $today;
+		  echo 'Expires on';
+		  echo $oneYear;

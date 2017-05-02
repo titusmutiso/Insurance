@@ -1,0 +1,59 @@
+
+    <?php
+    // Be sure to include the file you've just downloaded
+	//connection to DB
+	require"includes/config.php";
+    require_once('AfricasTalkingGateway.php');
+    // Specify your login credentials
+    $username   = "Hannah.malla";
+    $apikey     = "0c310a24191c130cdd3436cd374acdf093fd87793111d36a96d728f7e187830e";
+    // NOTE: If connecting to the sandbox, please use your sandbox login credentials
+    // Specify the numbers that you want to send to in a comma-separated list
+    // Please ensure you include the country code (+254 for Kenya in this case)
+	//select fro DB
+	   $clients_query  = "select * from sp_customers WHERE id=1 AND id=2";
+       $clients_res    = mysqli_query($connection,$clients_query);
+       $clients_count  =   mysqli_num_rows($clients_res);
+	    while($clients_row=mysqli_fetch_array($clients_res)) {
+
+                          $clients_names = $clients_row['full_names'];
+                          //$clients_mname = $clients_row['role'];
+                          $clients_company = $clients_row['company'];
+                          $commenced_date = $clients_row['commencement_date'];
+                          $expiry_date = $clients_row['renewal_date'];
+                          $clients_status = $clients_row['status'];
+                          $clients_phone= $clients_row['phone_no'];
+                          $clients_email= $clients_row['email_add'];
+
+    $clients_id = $clients_row['id'];
+    $recipients =  $clients_row['phone_no'];
+    // And of course we want our recipients to know what we really do
+	
+    $message .= "Dear Client, Kindly note your Insurance cover is expiring on";
+	$message .= $expiry_date;
+	$message.="Please arrangements to renew early in advance. Asante for your support. Expat Insurance Agencies Nairobi";
+    // Create a new instance of our awesome gateway class
+   
+// Specify your AfricasTalking shortCode or sender id
+$from = "EXPATAGENCY";
+$gateway    = new AfricasTalkingGateway($username, $apikey);
+try 
+{
+   
+   $results = $gateway->sendMessage($recipients, $message, $from);
+            
+  foreach($results as $result) {
+    echo " Number: " .$result->number;
+    echo " Status: " .$result->status;
+    echo " MessageId: " .$result->messageId;
+    echo " Cost: "   .$result->cost."\n";
+  }
+}
+catch ( AfricasTalkingGatewayException $e )
+{
+  echo "Encountered an error while sending: ".$e->getMessage();
+}
+		}
+// DONE!!! 
+	
+	?>

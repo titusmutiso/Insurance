@@ -1,0 +1,26 @@
+/*
+SQLyog Professional v12.09 (64 bit)
+MySQL - 5.7.14 : Database - xpatagencies
+*********************************************************************
+*/
+
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`xpatagencies` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+USE `xpatagencies`;
+
+/*Data for the table `sp_customers` */
+
+insert  into `sp_customers`(`id`,`cust_number`,`first_name`,`middle_name`,`last_name`,`commencement_date`,`renewal_date`,`phone_no`,`email_add`,`company`,`cover`,`premium`,`status`,`date_created`,`full_names`,`message`) values (1,'CUS-0001','','','','2015-11-23','2016-11-24','+254723932434','','CIC',0,0,1,'2017-04-30 00:04:51','cellpro communications',0),(2,'CUS-0002','','','0','2015-06-11','2016-05-11','+254726405405','','CIC',0,0,1,'2017-04-30 00:05:54','Possible limited',0),(3,'CUS-0003','0','0','0','2015-11-24','2016-11-25','+254723932434','','CIC',0,0,1,'2017-04-30 00:07:40','Cellpro communications ',0),(4,'CUS-0004','0','0','0','2015-03-12','2015-02-12','+254790509763','','CIC',0,0,1,'2017-04-30 00:10:07','Harun Kamau/LEAH MUTERU NYAWIRA',0),(5,'CUS-0005','0','0','0','12/4/2015','12/3/2016','254723932434','0','CIC',0,0,1,'0','Cellpro communications ',0),(6,'CUS-0006','0','0','0','12/15/2015','12/14/2016','254723932434','0','CIC',0,0,1,'0','Cellpro communications ',0),(7,'CUS-0007','0','0','0','1/7/2016','1/6/2016','254725693748','0','K.ALLIANCE',0,0,1,'0','Geo map ',0),(8,'CUS-0008','0','0','0','11/24/2015','11/23/2016','254718771633','0','K.ALLIANCE',0,0,1,'0','Kennedy Otieno',0),(9,'CUS-0009','0','0','0','1/25/2016','1/24/2017','254723932434','0','CIC',0,0,1,'0','Cellpro communications ',0),(10,'CUS-0010','0','0','0','','','254','0','',0,0,1,'0','Cellpro communications ',0),(11,'CUS-0011','0','0','0','','','254720565328','0','',0,0,1,'0','Mark Mogere',0),(12,'CUS-0012','0','0','0','2/16/2016','2/15/2017','254724988889','0','K.ALLIANCE',0,0,1,'0','Joshua Maima Mutie',0),(13,'CUS-0013','0','0','0','2/28/2016','2/27/2017','254726969411','0','K.ALLIANCE',0,0,1,'0','Martha Shighadi',0),(14,'CUS-0014','0','0','0','3/1/2016','2/28/2017','254722484356','0','K.ALLIANCE',0,0,1,'0','Joseph Mwaniki',0),(15,'CUS-0015','0','0','0','','','254','0','CANCELLED STILL HAS DEBT OF 45000',0,0,1,'0','OLLREGGY INVESTMENT',0),(16,'CUS-0016','0','0','0','5/18/2016','5/17/2017','254723932332','0','K.ALLIANCE',0,0,1,'0','Julius Wa,bugu',0),(17,'CUS-0017','0','0','0','3/19/2016','3/18/2017','254720805912','0','CIC',0,0,1,'0','Margaret Wangui',0),(18,'CUS-0018','0','0','0','5/16/2016','5/15/2017','254723875721','0','CIC',0,0,1,'0','Danson Mabruki',0),(19,'CUS-0019','0','0','0','3/2/2016','3/1/2017','254723875721','0','AMACO',0,0,1,'0','Danson Mabruki',0),(20,'CUS-0020','0','0','0','4/2/2016','4/1/2017','254722424659','0','K.ALLIANCE',0,0,1,'0','Maria SHIGHADI',0),(21,'CUS-0021','0','0','0','3-May','5/2/2017','254723932332','0','CIC',0,0,1,'0','VOI WOMEN COP SOCIETY',0),(22,'CUS-0022','0','0','0','3/16/2016','3/15/2017','254','0','CIC',0,0,1,'0','Cellpro communications ',0),(23,'CUS-0023','0','0','0','3/16/2016','3/15/2017','254','0','CIC',0,0,1,'0','Cellpro communications ',0),(24,'CUS-0024','0','0','0','','','254728818101','0','',0,0,1,'0','Simon Wambugu',0),(25,'CUS-0025','0','0','0','22-Jul-16','21-Jul-17','254721408898','0','BRITAM',0,0,1,'0','RUTH MUENI MUMO',0),(26,'CUS-0026','0','0','0','1/30/2017','3/16/2017','254723932332','0','CIC',0,0,1,'0','Cellpro communications',0),(27,'CUS-0027','0','0','0','11/14/2016','5/15/2017','254721408898','0','CYTONN',0,0,1,'0','RUTH MUMO',0),(28,'CUS-0028','0','0','0','11/24/2016','11/24/2017','254713925935','0','OCCIDENTAL',0,0,1,'0','WESLEY KOECH',0),(29,'CUS-0029','0','0','0','1/21/2017','1/20/2018','254704219900','0','KENYAN ALLIANCE',0,0,1,'0','KEVIN /FLORENCE WAMBUGU',0),(30,'CUS-0030','0','0','0','2/14/2017','2/13/2017','254723932332','0','CIC',0,0,1,'0','Cellpro communications',0),(31,'CUS-0031','0','0','0','2/13/2017','2/12/2018','254726969411','0','KENYAN ALLIANCE',0,0,1,'0','Martha Shighadi',0),(32,'CUS-0032','0','0','0','2/28/2017','2/28/2018','254722484356','0','keNYAN ALLIANCE',0,0,1,'0','Mwaniki Kimani',0),(33,'CUS-0033','0','0','0','1/16/2017','1/15/2018','254705555445','0','kenYAN ALLIANCE',0,0,1,'0','Harun Kamau',0),(34,'CUS-0034','0','0','0','12/9/2018','12/9/2018','254729221165','0','KENYAN ALLIANCE',0,0,1,'0','Boniface ',0),(35,'CUS-0035','0','0','0','1/13/2018','1/13/2018','254728624148','0','kenYAN ALLIANCE',0,0,1,'0','Faizal Habib bank',0),(36,'CUS-0036','0','0','0','1/27/2017','1/26/2018','254720565328','0','Cannon',0,0,1,'0','Mark Mogere',0),(37,'CUS-0037','0','0','0','1/26/2017','1/25/2018','254721408898','0','KENYAN ALLIANCE',0,0,1,'0','David Mumo',0),(38,'CUS-0038','0','0','0','1/27/2017','1/26/2018','254721408898','0','KENYAN ALLIANCE',0,0,1,'0','',0);
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;

@@ -1,0 +1,47 @@
+http://ccoenraets.github.io/ionic-tutorial/install-ionic.html
+
+
+DELETE FROM on_search 
+WHERE search_date < UNIX_TIMESTAMP(DATE_SUB(NOW(), INTERVAL 180 DAY))
+
+SELECT * FROM sp_customers WHERE renewal_date < NOW() - INTERVAL 30 DAY
+
+> DATE_SUB(NOW(), INTERVAL 1 MONTH) 
+
+between DATE_FORMAT(curdate(),'%m/%d/%Y') AND (DATE_FORMAT(curdate() - interval 30 day,'%m/%d/%Y'))
+
+SELECT  DATE_FORMAT(create_date, '%m/%d/%Y')
+FROM    mytable
+WHERE   create_date BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE()
+
+select * 
+from cc_open_incident_view
+WHERE date >= (CURDATE() - INTERVAL 1 MONTH )
+
+select * 
+from cc_open_incident_view
+WHERE STR_TO_DATE(date ,''%d/%m/%y %h:%i:%s')>= (CURDATE() - INTERVAL 1 MONTH )
+
+
+fine code
+
+//Connect to database
+  mysql_connect("localhost","user","password") or die(mysql_error());
+  mysql_select_db("db") or die(mysql_error()); 
+  $sql = "SELECT email FROM members";  
+  $res = mysql_query($sql) or die(mysql_error());
+  while($row = mysql_fetch_assoc($res) )   
+  {  
+  $area .= $row['email']. ", ";
+  }
+    // read the list of emails from the file.
+   $email_list = explode(',', $area);
+  // count how many emails there are.
+  $total_emails = count($email_list);
+  // go through the list and trim off the newline character.
+  for ($counter=0; $counter<$total_emails; $counter++)
+  {
+  $email_list[$counter] = trim($email_list[$counter]);
+   }
+  $to = $email_list;
+  echo $to;
